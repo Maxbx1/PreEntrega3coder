@@ -1,3 +1,103 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to bottom, #2a2626, #ffffff);
+}
+
+.contaner {
+  max-width: 1200px;
+  margin: o auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.contaner h1 {
+  font-size: 32px;
+  color: #333;
+}
+.contaner h2 {
+  font-size: 24px;
+  color: #666;
+}
+.contaner p {
+  font-size: 16px;
+  color: #777;
+  line-height: 1.5;
+}
+.contaner .ima-index {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+.contaner a {
+  color: #007bff;
+  text-decoration: none;
+}
+.contaner a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-areas: "div div" "div div";
+}
+.cards-container .card {
+  margin: 10px;
+  padding: 10px;
+}
+.cards-container .card:hover {
+  border-color: rgb(8, 73, 73);
+}
+@media (max-width: 768px) {
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 12px;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
