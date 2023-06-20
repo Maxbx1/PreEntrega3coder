@@ -12,14 +12,8 @@
 //gradientes
 @import "gradients.scss";
 
-//box
-$box-shadow-color: rgba(0, 0, 0, 0.1);
+//reset css
 
-//backgrounds
-$background-color: #f2f2f2;
-
-
-/* reset css */
 * {
   margin: 0;
   padding: 0;
@@ -153,3 +147,46 @@ body {
     font-size: 12px;
   }
 }
+
+// condicionales
+
+$font-size-desktop: 16px;
+// Tamanio de fuente para dispositivos de escritorio
+ 
+$font-size-mobile: 14px;
+// Tamanio de fuente para dispositivos moviles
+
+ $use-desktop-font-size: true;
+
+ @mixin font-size() {
+    @if $use-desktop-font-size {
+      font-size: $font-size-desktop;
+    } @else {
+      font-size: $font-size-mobile;
+    }
+  }
+  
+  body {
+    @include font-size(); 
+
+
+
+}
+
+
+// extend
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0d6efd;
+    color: white;
+  }
+  
+//Estilo para el boton de enviar
+  .btn-primary {
+    @extend .button; 
+  }
+
+
+
