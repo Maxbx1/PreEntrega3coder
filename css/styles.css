@@ -37,9 +37,10 @@ p {
 }
 
 img.img-index {
-  max-width: 100%;
-  height: auto;
-  margin-top: 20px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 100px;
 }
 
 a {
