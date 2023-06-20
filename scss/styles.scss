@@ -42,6 +42,11 @@ h2 {
   font-size: 24px;
   color: $secondary-color;
 }
+.container {
+    h2 {
+        font-size: 40px;
+    }
+}
 
 p {
   font-size: 16px;
@@ -168,9 +173,6 @@ $font-size-mobile: 14px;
   
   body {
     @include font-size(); 
-
-
-
 }
 
 
@@ -189,4 +191,59 @@ $font-size-mobile: 14px;
   }
 
 
+// animaciones
 
+.img-index {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.img-index:hover {
+    transform: scale(1.1);
+}
+
+// cards
+@keyframes cardAnimation {
+    0% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .card {
+    animation: cardAnimation 0.5s ease-in-out;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  h2 {
+    animation: fade-in 0.5s ease-in-out;
+  }
+
+  @keyframes rotate-in {
+    0% {
+      transform: rotateX(90deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(0);
+      opacity: 1;
+    }
+  }
+  
+  h1 {
+    animation: rotate-in 0.8s ease-in-out;
+  }
